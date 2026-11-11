@@ -3,148 +3,187 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Huaizhi Liao is a master's student at the School of Automation and Intelligent Sensing, Shanghai Jiao Tong University. Research interests: Industrial Agents.">
+  <meta name="description" content="Huaizhi Liao, master's student at Shanghai Jiao Tong University. Research interests in industrial agents. Publications and conference papers in robotics and wind turbine blade reconstruction.">
   <meta name="color-scheme" content="light">
   <title>Huaizhi Liao | Shanghai Jiao Tong University</title>
   <link rel="canonical" href="https://felix-lhz.github.io/">
   <style>
-    :root { --ink: #1d2a39; --muted: #5b6675; --blue: #245b95; --line: #e2e7ec; --soft: #f5f8fb; }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; background: #fff; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; font-size: 16px; line-height: 1.75; }
-    a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 4px; }
-    a:hover { color: #153b66; }
-    a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue); outline-offset: 5px; border-radius: 2px; }
-    .skip { position: absolute; top: -100px; left: 24px; z-index: 2; background: #fff; padding: 8px 14px; border: 1px solid var(--blue); }
-    .skip:focus { top: 12px; }
-    .shell { width: min(1080px, calc(100% - 80px)); margin-inline: auto; }
-    header { border-bottom: 1px solid var(--line); }
-    nav { min-height: 80px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
-    .brand { font-weight: 650; font-size: 15px; letter-spacing: .02em; color: var(--ink); text-decoration: none; }
-    .nav-links { display: flex; flex-wrap: wrap; gap: 26px; font-size: 14px; }
-    .nav-links a { color: var(--muted); text-decoration: none; }
-    .nav-links a:hover { color: var(--blue); text-decoration: underline; }
-    main { display: grid; grid-template-columns: 285px minmax(0, 1fr); gap: 74px; padding-block: 68px 72px; }
-    .profile { align-self: start; }
-    .eyebrow { margin: 0 0 14px; color: var(--blue); font-size: 11px; font-weight: 650; text-transform: uppercase; letter-spacing: .16em; }
-    h1 { margin: 0 0 22px; font-family: Georgia, "Times New Roman", serif; font-size: 51px; line-height: 1.1; font-weight: 500; letter-spacing: -.04em; }
-    .role { margin: 0 0 10px; font-size: 18px; font-weight: 500; }
-    .affiliation { margin: 0 0 8px; color: var(--muted); font-size: 15px; line-height: 1.65; }
-    .university { margin: 0; font-size: 15px; }
-    .profile-links { display: flex; flex-direction: column; align-items: start; gap: 10px; padding-top: 24px; margin-top: 26px; border-top: 1px solid var(--line); font-size: 14px; }
-    .content { min-width: 0; }
-    .section { scroll-margin-top: 26px; }
-    .section + .section { margin-top: 34px; padding-top: 30px; border-top: 1px solid var(--line); }
-    h2 { margin: 0 0 16px; font-size: 13px; line-height: 1.6; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; }
-    p { margin: 0; }
-    .about { font-size: 17px; line-height: 1.8; }
-    .research { margin-top: 19px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 13px; font-size: 14px; }
-    .research-label { color: var(--muted); }
-    .research-topic { color: var(--blue); font-weight: 550; }
-    .publication { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 18px; }
-    .pub-year { padding-top: 4px; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
-    h3 { margin: 0 0 13px; font-family: Georgia, "Times New Roman", serif; font-size: 25px; line-height: 1.35; font-weight: 500; letter-spacing: -.015em; }
-    h3 a { color: var(--ink); text-decoration: none; }
-    h3 a:hover { color: var(--blue); text-decoration: underline; }
-    .authors { margin-bottom: 7px; font-size: 14px; }
-    .authors strong { font-weight: 650; }
-    .venue { color: var(--muted); font-size: 14px; line-height: 1.7; }
-    .pub-links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 16px; font-size: 13px; }
-    .doi { margin-top: 12px; color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
-    details { margin-top: 20px; font-size: 13px; }
-    summary { cursor: pointer; width: fit-content; color: var(--blue); }
-    pre { margin: 12px 0 0; padding: 18px; border: 1px solid var(--line); background: var(--soft); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; line-height: 1.65; }
-    .contact-list { display: grid; gap: 10px; margin: 0; }
-    .contact-list div { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 18px; align-items: baseline; }
-    dt { color: var(--muted); font-size: 12px; }
-    dd { margin: 0; font-size: 14px; overflow-wrap: anywhere; }
-    footer { border-top: 1px solid var(--line); padding-block: 22px 28px; color: var(--muted); font-size: 12px; }
-    footer .shell { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 22px; }
-    @media (max-width: 850px) {
-      .shell { width: calc(100% - 56px); }
-      main { grid-template-columns: 240px minmax(0, 1fr); gap: 38px; }
-      h1 { font-size: 45px; }
-      .publication { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+    :root { --bg:#faf9f6; --paper:#fff; --ink:#1c2c34; --muted:#606c70; --accent:#a44336; --line:#e3e1da; --soft:#f1efe9; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; font-size:16px; line-height:1.75; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration-thickness:1px; text-underline-offset:5px; }
+    a:hover { color:var(--accent); }
+    a:focus-visible, summary:focus-visible { outline:3px solid var(--accent); outline-offset:5px; border-radius:2px; }
+    p, h1, h2, h3 { margin:0; }
+    .shell { width:min(1080px,calc(100% - 80px)); margin-inline:auto; }
+    .skip { position:absolute; top:-100px; left:24px; z-index:10; padding:10px 16px; background:white; border:1px solid var(--accent); }
+    .skip:focus { top:12px; }
+    header { border-bottom:1px solid var(--line); }
+    nav { min-height:88px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:flex; align-items:center; gap:13px; text-decoration:none; font-size:14px; font-weight:650; }
+    .monogram { width:36px; height:36px; display:grid; place-items:center; border:1px solid var(--accent); color:var(--accent); font-family:Georgia,serif; font-size:17px; font-weight:500; }
+    .nav-links { display:flex; gap:30px; font-size:13px; color:var(--muted); }
+    .nav-links a { text-decoration:none; }
+    .nav-links a:hover { text-decoration:underline; }
+    .hero { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(0,1fr); gap:82px; align-items:center; padding-block:76px 56px; scroll-margin-top:28px; }
+    .eyebrow { display:flex; align-items:center; gap:10px; color:var(--accent); text-transform:uppercase; letter-spacing:.16em; font-size:11px; font-weight:650; margin-bottom:20px; }
+    .eyebrow::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--accent); }
+    h1 { font-family:Georgia,"Times New Roman",serif; font-size:clamp(48px,5.8vw,70px); line-height:1.08; font-weight:400; letter-spacing:-.045em; margin-bottom:23px; }
+    .intro { max-width:570px; font-size:17px; line-height:1.85; color:var(--muted); }
+    .hero-links { display:flex; flex-wrap:wrap; align-items:center; gap:15px 24px; margin-top:28px; font-size:13px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; gap:20px; padding:10px 17px; text-decoration:none; background:var(--ink); color:white; border:1px solid var(--ink); border-radius:4px; }
+    .button:hover { background:var(--accent); color:white; border-color:var(--accent); }
+    .affiliation { border-left:2px solid var(--accent); padding:5px 0 6px 28px; }
+    .small-label { color:var(--muted); font-size:10px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; }
+    .role { font-size:21px; margin:8px 0 10px; font-family:Georgia,"Times New Roman",serif; }
+    .school { font-size:14px; color:var(--muted); line-height:1.8; }
+    .university { font-size:14px; margin-top:3px; font-weight:550; }
+    .focus { display:flex; align-items:center; gap:22px; border-top:1px solid var(--line); padding:24px 0 26px; }
+    .focus .small-label { flex-shrink:0; }
+    .focus-topic { font-family:Georgia,"Times New Roman",serif; font-size:24px; line-height:1.4; }
+    .focus-line { height:1px; flex:1; background:var(--line); margin-left:16px; }
+    .section { padding-top:43px; scroll-margin-top:28px; }
+    .section-heading { display:flex; align-items:baseline; gap:16px; margin-bottom:25px; }
+    .section-number { font-size:11px; color:var(--accent); letter-spacing:.06em; }
+    h2 { font-family:Georgia,"Times New Roman",serif; font-weight:400; font-size:34px; line-height:1.2; letter-spacing:-.025em; }
+    .paper { display:grid; grid-template-columns:92px minmax(0,1fr); gap:30px; padding:32px; border:1px solid var(--line); background:var(--paper); border-radius:10px; }
+    .paper + .paper { margin-top:18px; }
+    .paper-marker { padding-top:3px; }
+    .venue-short { font-family:Georgia,"Times New Roman",serif; font-size:28px; line-height:1.3; color:var(--accent); }
+    .paper-year { font-size:13px; color:var(--muted); margin-top:4px; }
+    .paper-type { font-size:10px; line-height:1.6; color:var(--muted); margin-top:17px; }
+    h3 { font-family:Georgia,"Times New Roman",serif; font-size:25px; font-weight:400; line-height:1.4; letter-spacing:-.015em; margin-bottom:13px; }
+    h3 a { text-decoration:none; }
+    h3 a:hover { text-decoration:underline; }
+    .authors { font-size:13px; color:var(--muted); line-height:1.8; margin-bottom:7px; }
+    .authors strong { color:var(--ink); font-weight:650; }
+    .venue { font-size:13px; line-height:1.8; color:var(--muted); }
+    cite { font-style:normal; }
+    .paper-note { margin-top:14px; color:var(--muted); font-size:13px; line-height:1.8; }
+    .paper-links { display:flex; flex-wrap:wrap; gap:10px 24px; margin-top:20px; font-size:12px; }
+    .paper-links a { color:var(--accent); }
+    .record-id { color:var(--muted); font-size:11px; margin-top:12px; overflow-wrap:anywhere; }
+    details { margin-top:15px; font-size:12px; }
+    summary { width:fit-content; cursor:pointer; color:var(--muted); }
+    summary:hover { color:var(--accent); }
+    pre { background:var(--bg); border:1px solid var(--line); padding:18px; margin:12px 0 0; white-space:pre-wrap; overflow-wrap:anywhere; font-size:11px; line-height:1.75; }
+    .contact-section { margin-top:54px; padding:34px 0 54px; border-top:1px solid var(--line); }
+    .contact-layout { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+    .contact-lead { font-family:Georgia,"Times New Roman",serif; font-size:22px; line-height:1.5; margin-top:15px; }
+    .contact-lead a { overflow-wrap:anywhere; }
+    .contact-list { display:grid; gap:12px; margin:0; padding-top:4px; }
+    .contact-list div { display:grid; grid-template-columns:60px minmax(0,1fr); gap:18px; align-items:baseline; }
+    dt { color:var(--muted); font-size:11px; }
+    dd { margin:0; font-size:13px; overflow-wrap:anywhere; }
+    footer { border-top:1px solid var(--line); padding-block:23px 30px; font-size:11px; color:var(--muted); }
+    footer .shell { display:flex; justify-content:space-between; gap:12px 24px; flex-wrap:wrap; }
+    @media (max-width:850px) { .hero { gap:36px; } .paper { grid-template-columns:70px minmax(0,1fr); gap:22px; padding:27px; } }
+    @media (max-width:680px) {
+      .shell { width:calc(100% - 40px); }
+      nav { min-height:82px; flex-wrap:wrap; justify-content:flex-start; gap:10px 22px; padding-block:16px; }
+      .brand { font-size:13px; }
+      .monogram { width:30px; height:30px; font-size:15px; }
+      .nav-links { gap:20px; font-size:12px; }
+      .hero { grid-template-columns:minmax(0,1fr); gap:34px; padding-block:44px 34px; }
+      h1 { font-size:52px; }
+      .intro { font-size:16px; }
+      .affiliation { padding-left:20px; }
+      .focus { align-items:start; flex-direction:column; gap:7px; padding-block:23px; }
+      .focus-line { display:none; }
+      .section { padding-top:28px; }
+      h2 { font-size:30px; }
+      .paper { grid-template-columns:minmax(0,1fr); gap:17px; padding:23px; }
+      .paper-marker { display:flex; align-items:baseline; flex-wrap:wrap; gap:8px 12px; }
+      .venue-short { font-size:21px; }
+      .paper-year { margin:0; font-size:12px; }
+      .paper-type { margin:0; font-size:10px; }
+      h3 { font-size:23px; }
+      .paper-links { column-gap:20px; }
+      .contact-section { margin-top:38px; padding-block:28px 38px; }
+      .contact-layout { grid-template-columns:minmax(0,1fr); gap:25px; }
+      .contact-lead { font-size:21px; }
+      .contact-list div { grid-template-columns:56px minmax(0,1fr); gap:12px; }
     }
-    @media (max-width: 680px) {
-      .shell { width: calc(100% - 40px); }
-      nav { min-height: 86px; flex-wrap: wrap; align-content: center; gap: 8px 20px; padding-block: 14px; }
-      .brand { font-size: 14px; }
-      .nav-links { gap: 18px; font-size: 12px; }
-      main { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-block: 42px; }
-      h1 { font-size: 48px; margin-bottom: 18px; }
-      .profile-links { flex-direction: row; flex-wrap: wrap; gap: 10px 24px; padding-top: 18px; margin-top: 21px; }
-      .content { border-top: 1px solid var(--line); padding-top: 28px; }
-      .about { font-size: 16px; }
-      h3 { font-size: 24px; }
-      .section + .section { margin-top: 28px; padding-top: 26px; }
-      .contact-list div { grid-template-columns: minmax(0, 1fr); gap: 0; }
-    }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header>
     <nav class="shell" aria-label="Main navigation">
-      <a class="brand" href="#main">Huaizhi Liao</a>
+      <a class="brand" href="#main"><span class="monogram" aria-hidden="true">HL</span>Huaizhi Liao</a>
       <div class="nav-links"><a href="#about">About</a><a href="#publications">Publications</a><a href="#contact">Contact</a></div>
     </nav>
   </header>
   <main id="main" class="shell">
-    <section class="profile" aria-labelledby="name">
-      <p class="eyebrow">Academic Profile</p>
-      <h1 id="name">Huaizhi Liao</h1>
-      <p class="role">Master's Student</p>
-      <p class="affiliation">School of Automation<br>and Intelligent Sensing</p>
-      <p class="university">Shanghai Jiao Tong University</p>
-      <div class="profile-links">
-        <a href="mailto:felix152@sjtu.edu.cn">felix152@sjtu.edu.cn</a>
-        <a href="https://github.com/felix-lhz">GitHub &nearr;</a>
+    <section class="hero" id="about" aria-labelledby="name">
+      <div>
+        <p class="eyebrow">Academic profile</p>
+        <h1 id="name">Huaizhi Liao</h1>
+        <p class="intro">I am a master's student at Shanghai Jiao Tong University. My research interests focus on industrial agents.</p>
+        <div class="hero-links"><a class="button" href="#publications">View publications <span aria-hidden="true">&#8595;</span></a><a href="https://github.com/felix-lhz">GitHub <span aria-hidden="true">&#8599;</span></a></div>
+      </div>
+      <div class="affiliation">
+        <p class="small-label">Affiliation</p>
+        <p class="role">Master's Student</p>
+        <p class="school">School of Automation and Intelligent Sensing</p>
+        <p class="university">Shanghai Jiao Tong University</p>
+        <p style="margin-top:16px;font-size:13px"><a href="mailto:felix152@sjtu.edu.cn">felix152@sjtu.edu.cn</a></p>
       </div>
     </section>
-    <div class="content">
-      <section class="section" id="about" aria-labelledby="about-title">
-        <h2 id="about-title">About</h2>
-        <p class="about">I am a master's student in the School of Automation and Intelligent Sensing at Shanghai Jiao Tong University. My research interests focus on industrial agents.</p>
-        <p class="research"><span class="research-label">Research interest</span><span class="research-topic">Industrial Agents</span></p>
-      </section>
-      <section class="section" id="publications" aria-labelledby="publications-heading">
-        <h2 id="publications-heading">Publications</h2>
-        <article class="publication" aria-labelledby="paper-title">
-          <p class="pub-year">2025</p>
-          <div>
-            <h3 id="paper-title"><a href="https://doi.org/10.23919/CCC64809.2025.11179077">Adaptive Robust Control of Wheel-Legged Self-Balancing Robot Based on LQR</a></h3>
-            <p class="authors"><strong>Huaizhi Liao</strong>, Yingheng Liu, Liangren Shi</p>
-            <p class="venue"><cite>2025 44th Chinese Control Conference (CCC)</cite><br>2025 &middot; pp. 1&ndash;6</p>
-            <div class="pub-links">
-              <a href="https://doi.org/10.23919/CCC64809.2025.11179077">View publication &nearr;</a>
-              <a href="publications/liao-2025-lqr.bib" download>Download BibTeX</a>
-            </div>
-            <p class="doi">DOI: 10.23919/CCC64809.2025.11179077</p>
-            <details>
-              <summary>BibTeX citation</summary>
-              <pre><code>@INPROCEEDINGS{11179077,
+    <div class="focus"><span class="small-label">Research focus</span><span class="focus-topic">Industrial Agents</span><span class="focus-line" aria-hidden="true"></span></div>
+    <section class="section" id="publications" aria-labelledby="publications-heading">
+      <div class="section-heading"><span class="section-number" aria-hidden="true">01</span><h2 id="publications-heading">Publications</h2></div>
+      <article class="paper" aria-labelledby="cac-title">
+        <div class="paper-marker"><p class="venue-short">CAC</p><p class="paper-year">2026</p><p class="paper-type">Conference record</p></div>
+        <div>
+          <h3 id="cac-title"><a href="https://conf.cacpaper.com/online-poster/cac2026/#/indexP2/124340">From Sparse Point Clouds to Closed Curves: Wind Turbine Blade Profile Reconstruction with Architecture-Embedded Geometric Priors</a></h3>
+          <p class="authors"><strong>Huaizhi Liao</strong>, Qi Liu, Bo Yang, Yuxiang Liu, Peng Wang, Dawen Zhao, Hongwei Bai, Huan Wen</p>
+          <p class="venue"><cite>2026 Chinese Automation Congress (CAC)</cite></p>
+          <p class="paper-note">Reconstructing smooth, closed wind turbine blade profiles from sparse LiDAR point clouds using geometric priors and B-splines.</p>
+          <div class="paper-links"><a href="https://conf.cacpaper.com/online-poster/cac2026/#/indexP2/124340">Official conference record &#8599;</a><a href="publications/liao-2026-cac.bib" download>Download BibTeX</a></div>
+          <p class="record-id">Paper ID: 124340</p>
+          <details><summary>BibTeX citation</summary><pre><code>@INPROCEEDINGS{Liao2026CAC,
+  author = {Liao, Huaizhi and Liu, Qi and Yang, Bo and Liu, Yuxiang and Wang, Peng and Zhao, Dawen and Bai, Hongwei and Wen, Huan},
+  title = {From Sparse Point Clouds to Closed Curves: Wind Turbine Blade Profile Reconstruction with Architecture-Embedded Geometric Priors},
+  booktitle = {2026 Chinese Automation Congress (CAC)},
+  year = {2026},
+  note = {Paper 124340; official conference record},
+  url = {https://conf.cacpaper.com/online-poster/cac2026/#/indexP2/124340}
+}</code></pre></details>
+        </div>
+      </article>
+      <article class="paper" aria-labelledby="ccc-title">
+        <div class="paper-marker"><p class="venue-short">CCC</p><p class="paper-year">2025</p><p class="paper-type">Proceedings paper</p></div>
+        <div>
+          <h3 id="ccc-title"><a href="https://doi.org/10.23919/CCC64809.2025.11179077">Adaptive Robust Control of Wheel-Legged Self-Balancing Robot Based on LQR</a></h3>
+          <p class="authors"><strong>Huaizhi Liao</strong>, Yingheng Liu, Liangren Shi</p>
+          <p class="venue"><cite>2025 44th Chinese Control Conference (CCC)</cite> &middot; pp. 1&ndash;6</p>
+          <div class="paper-links"><a href="https://doi.org/10.23919/CCC64809.2025.11179077">View publication &#8599;</a><a href="publications/liao-2025-lqr.bib" download>Download BibTeX</a></div>
+          <p class="record-id">DOI: 10.23919/CCC64809.2025.11179077</p>
+          <details><summary>BibTeX citation</summary><pre><code>@INPROCEEDINGS{11179077,
   author = {Liao, Huaizhi and Liu, Yingheng and Shi, Liangren},
   booktitle = {2025 44th Chinese Control Conference (CCC)},
   title = {Adaptive Robust Control of Wheel-Legged Self-Balancing Robot Based on {LQR}},
   year = {2025},
   pages = {1-6},
   doi = {10.23919/CCC64809.2025.11179077}
-}</code></pre>
-            </details>
-          </div>
-        </article>
-      </section>
-      <section class="section" id="contact" aria-labelledby="contact-heading">
-        <h2 id="contact-heading">Contact</h2>
+}</code></pre></details>
+        </div>
+      </article>
+    </section>
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="section-heading"><span class="section-number" aria-hidden="true">02</span><h2 id="contact-heading">Contact</h2></div>
+      <div class="contact-layout">
+        <div><p class="small-label">Primary email</p><p class="contact-lead"><a href="mailto:felix152@sjtu.edu.cn">felix152@sjtu.edu.cn</a></p></div>
         <dl class="contact-list">
-          <div><dt>Primary</dt><dd><a href="mailto:felix152@sjtu.edu.cn">felix152@sjtu.edu.cn</a></dd></div>
           <div><dt>Gmail</dt><dd><a href="mailto:huaizhiliao152@gmail.com">huaizhiliao152@gmail.com</a></dd></div>
           <div><dt>163 Mail</dt><dd><a href="mailto:hzliao2004@163.com">hzliao2004@163.com</a></dd></div>
+          <div><dt>GitHub</dt><dd><a href="https://github.com/felix-lhz">github.com/felix-lhz</a></dd></div>
         </dl>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
   <footer><div class="shell"><span>Huaizhi Liao</span><span>Shanghai Jiao Tong University</span></div></footer>
 </body>

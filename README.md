@@ -23,3 +23,10 @@ In **Settings > Pages**, use **Deploy from a branch**, branch **main**, folder *
 
 - The school name follows SJTU's published English usage: [School/Department Contact Information of SJTU](https://global.sjtu.edu.cn/en/storage/global/web/en/article/2026/01/9b76419a19ff04030c06cbfec78543d5.pdf).
 - Publication metadata follows the author's supplied BibTeX. The public record is linked through its [DOI](https://doi.org/10.23919/CCC64809.2025.11179077).
+
+
+## Publication record verification (November 11, 2026)
+
+- CCC 2025: metadata supplied by the author, linked via DOI 10.23919/CCC64809.2025.11179077.
+- CAC 2026: title, author order, affiliation and abstract verified on the [official conference poster record](https://conf.cacpaper.com/online-poster/cac2026/#/indexP2/124340), Paper 124340. The page links this conference record; it does not claim an IEEE Xplore record, DOI, or page range. The downloadable BibTeX reflects those limits.
+- PREE 2026: an author-specific public paper record was not identified in this search, so no entry was added. This is not evidence that the paper has not been published. The [official website](https://pree.net/) lists a 2026 proceedings ISBN, but no individual record for this author was verified.
